@@ -1,6 +1,4 @@
-subprocess
 streamlit==1.21.0
 pip==23.2.1
-bs4
-BeautifulSoup
-requests
+beautifulsoup4==4.9.3
+requests==2.26.0
