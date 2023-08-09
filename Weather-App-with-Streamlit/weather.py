@@ -13,7 +13,7 @@ if __name__ == '__main__':
 st.set_page_config(
         page_title="Weather App :cloud:",
         page_icon="🌍",
-        # layout="wide",
+        layout="wide",
     )
 
 st.title("Weather App 🌧️ :sunny:")
@@ -53,11 +53,12 @@ if st.button("Search"):
     
     loc, temp_f, time, weather = get_weather_data(loc)
     temp_c = fahrenheit_to_celsius(int(temp_f))  # Convert Fahrenheit to Celsius
+    rounded_temp_c = round(temp_c)  # Round the temperature to the nearest integer
     
     with col1:
         st.title("Current Weather :earth_asia:")
         st.header(loc)
-        st.header(f"{temp_c:.1f} °C")  # Display temperature in Celsius with one decimal place
+        st.header(f"{rounded_temp_c} °C")  # Display rounded temperature in Celsius
     with col2:
         st.text(" ")
         st.text(" ")
