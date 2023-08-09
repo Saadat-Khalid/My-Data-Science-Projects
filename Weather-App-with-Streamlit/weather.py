@@ -3,11 +3,11 @@ import streamlit as st
 import requests
 from bs4 import BeautifulSoup
 
-# def install_packages():
-#     subprocess.check_call(["pip", "install", "-r", "requirements.txt"])
+def install_packages():
+        subprocess.check_call(["pip", "install", "-r", "requirements.txt"])
 
-# if __name__ == '__main__':
-#     install_packages()
+if __name__ == '__main__':
+        install_packages()
 
 
 st.set_page_config(
