@@ -42,18 +42,22 @@ def get_weather_data(location):
         return location, temperature, time, weather
     else:
         return "Weather information not found."
+            
+def fahrenheit_to_celsius(fahrenheit):
+    return (fahrenheit - 32) * 5.0/9.0
 
 loc = st.text_input("Enter Location:", value="Peshawar")
 
 if st.button("Search"):
     col1, col2 = st.columns((2,1))
     
-    loc, temp, time, weather = get_weather_data(loc)
+    loc, temp_f, time, weather = get_weather_data(loc)
+    temp_c = fahrenheit_to_celsius(int(temp_f))  # Convert Fahrenheit to Celsius
     
     with col1:
         st.title("Current Weather :earth_asia:")
         st.header(loc)
-        st.header(temp)
+        st.header(f"{temp_c:.1f} °C")  # Display temperature in Celsius with one decimal place
     with col2:
         st.text(" ")
         st.text(" ")
