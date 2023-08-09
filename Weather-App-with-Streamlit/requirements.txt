@@ -1,6 +1,6 @@
 subprocess
-streamlit
-pip
+streamlit==1.21.0
+pip==23.2.1
 bs4
 BeautifulSoup
 requests
